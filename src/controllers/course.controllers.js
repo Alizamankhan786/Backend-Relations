@@ -13,13 +13,13 @@ const addCourse = async (req , res) => {
     });
 
     res.json({
-        message: "Course Created"
+        message: "Course Created SuccessFully"
     });
 };
 
 
 const getCourse = async (req, res) => {
-    const course = await Course.find({}).populate('enrolledStudents')
+    const course = await Course.find({}).populate("enrolledStudents")
     res.json(course);
   };
 
